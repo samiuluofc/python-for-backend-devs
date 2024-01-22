@@ -4,6 +4,7 @@ LOCATION=Canada
 include .env
 
 setup:
+	@pre-commit install -c .pre-commit-config.yaml
 	@pip install -r requirements.txt
 
 who:
