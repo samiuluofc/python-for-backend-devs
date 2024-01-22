@@ -1,15 +1,26 @@
-  repos:
+repos:
 
-  - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
-    hooks:
-      - id: isort
-        name: isort (python)
+- repo: https://github.com/pycqa/isort
+  rev: 5.12.0
+  hooks:
+    - id: isort
+      name: isort (python)
 
-  - repo: https://github.com/google/yapf
-    rev: v0.40.2
-    hooks:
-      - id: yapf
+- repo: https://github.com/google/yapf
+  rev: v0.40.2
+  hooks:
+    - id: yapf
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+    -  id: trailing-whitespace
+
+- repo: https://github.com/hadialqattan/pycln
+  rev: v2.4.0
+  hooks:
+    - id: pycln
+
 
 
 
