@@ -10,7 +10,8 @@ Variable naming rules:
 
 
 Python style guide (PEP8): https://peps.python.org/pep-0008/
-YAPF pre-commit-hook is following PEP8
+YAPF pre-commit-hook is following PEP8.
+Google python style guide: https://google.github.io/styleguide/pyguide.html
 
 Variable names should use snake_case in python: multi_words_separated_by_underscore_all_lower_case.
 CamelCase for class names and Exceptions.
