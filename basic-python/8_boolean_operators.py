@@ -27,7 +27,7 @@ else:
 a = 20
 b = 0
 
-print(b != 0
-      and (a / b) > 1)  # instead of ZeroDivisionError, its False. Because
+print(b != 0 and (a / b) > 1)
+# instead of ZeroDivisionError, its False. Because
 # short circuited evaluation only executed b != 0 first, which is False in this case.
 # So its never executes the second part (a / b).
