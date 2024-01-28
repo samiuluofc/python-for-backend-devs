@@ -14,7 +14,12 @@ t1 = (5, )  # Tuple with 1 element
 print(type(t1), t1)
 
 t2 = (10, 20, 30, 40)  # Tuple created using literal
-t3 = 1, 2, 3, 4, 5  # # Tuple created using literal. () is not mandatory, but good practice to have it
+t3 = 1, 2, 3, 4, 5
+
+# Tuple created using literal. () is not mandatory, but good practice to have it.
+# However, in a function return we can do 'return a, b' instead of 'return (a, b)'.
+# Basically its returning multiple results as tuple.
+
 print(type(t2), t2)
 print(type(t3), t3)
 t4 = tuple([1, 2, 3, 4, 5])  # list created using tuple constructor function
@@ -55,3 +60,22 @@ print(len(b))
 # Create a tuple with 10s of 0s.
 a = (0, ) * 10
 print(a)
+
+# Convert a tuple to a list
+t9 = ('sam', 'emon', 'nobin')
+list9 = list(t9)
+print(t9, list9)
+
+# Be careful about copying list, tuple and string. Cause It copy the same object (having same reference).
+# Which means changing it in one will impact all.
+matrix = ([0, 0], 0) * 3
+print(matrix)
+matrix[0][1] = 8
+print(matrix)  # Impacted into all 3 of the [0, 0]
+print()
+
+# Create a zero matrix
+zero_mat = [[0, 0, 0]] * 3
+print(zero_mat)
+print(id(zero_mat[0]), id(zero_mat[1]),
+      id(zero_mat[2]))  # all have same reference :(
