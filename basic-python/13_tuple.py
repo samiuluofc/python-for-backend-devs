@@ -10,9 +10,6 @@ When to use tuple over list:
     instead of lists.
 """
 
-t0 = (
-)  # Empty tuple, but its useless, cause we cannot add any element into it
-print(type(t0), t0)
 t1 = (5, )  # Tuple with 1 element
 print(type(t1), t1)
 
@@ -47,3 +44,14 @@ print(t3[-2])  # access the second last element using negative index
 t5[3][1] = True
 # t3[3] = [True, True] # Not allowed
 print(t5)
+
+# Creating empty tuple.
+# But its useless, cause we cannot add any element into it
+a = ()
+print(len(a))
+b = tuple()
+print(len(b))
+
+# Create a tuple with 10s of 0s.
+a = (0, ) * 10
+print(a)

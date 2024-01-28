@@ -42,3 +42,7 @@ a = []
 print(len(a))
 b = list()
 print(len(b))
+
+# Create a list with 10s of 0s.
+a = [0] * 10
+print(a)
