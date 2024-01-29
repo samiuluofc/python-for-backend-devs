@@ -28,8 +28,9 @@ print(list3[3][1])
 print(len(list3))  # built-in len() function. Result is 4.
 print(len(list3[3]))  # built-in len() function. Result is 2.
 # print(list1[100]) # Will cause IndexError
-print(list1[-1])  # access the last element using negative index
+print(list1[-1])  # access the last element using negative index.
 print(list1[-2])  # access the second last element using negative index
+# negative index starts with -len(l) to -1 (first to last)
 
 # Replace list element:
 list1[0] = 1000
