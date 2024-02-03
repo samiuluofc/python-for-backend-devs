@@ -70,6 +70,11 @@ class Specification():
     def is_satisfied(self, item):
         pass
 
+    def __and__(
+            self,
+            other):  # Binary & operator overloading (we cannot overload 'and')
+        return AndSpecifications(self, other)
+
 
 # Acting as an abstract base class (no implementation).
 # Need to override.
@@ -98,6 +103,16 @@ class SizeSpecification(Specification):  # extends
         return item.size == self.size
 
 
+class AndSpecifications(Specification):
+
+    def __init__(self, *args_specs):  # N number of specifications
+        self.specs = args_specs
+
+    def is_satisfied(self, item):
+        func = lambda spec: spec.is_satisfied(item)  # lambda
+        return all(map(func, self.specs))
+
+
 # So we can create as much as possible Specification class based on product features/attributes
 class BetterFilter(Filter):  #extends
 
@@ -110,7 +125,7 @@ class BetterFilter(Filter):  #extends
 if __name__ == '__main__':  # in case we want to use this file as a module, this if will be false then
 
     apple = Product('Apple', Color.GREEN, Size.SMALL)
-    tree = Product('Tree', Color.GREEN, Size.LARGE)
+    tree = Product('Tree', Color.GREEN, Size.MEDIUM)
     house = Product('House', Color.BLUE, Size.LARGE)
 
     products = [apple, tree, house]  # create the product lists
@@ -118,6 +133,7 @@ if __name__ == '__main__':  # in case we want to use this file as a module, this
     # Create the specifications first
     green = ColorSpecification(Color.GREEN)
     large = SizeSpecification(Size.LARGE)
+    green_large = green & large  # Due to overloading __and__
 
     bf = BetterFilter()
 
@@ -129,6 +145,11 @@ if __name__ == '__main__':  # in case we want to use this file as a module, this
     for p in bf.filter(products, large):
         print(f"{p.name} is large")
 
+    print("Filter by size and color:")
+    for p in bf.filter(products, large):
+        print(f"{p.name} is green and large")
+
 # That means if new features/attributes added to the Product class,
 # We will just create a new Specification class like Color or Size. Then do the filter.
 # This approach is not going to modify any of the specification or Filter class.
+# More flexible and scalable approach
