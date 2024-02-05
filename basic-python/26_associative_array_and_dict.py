@@ -40,7 +40,7 @@ print(d, type(d), len(d))
 d = {'a': 1, 'b': 2, 'c': 3}
 print(d, type(d), len(d))
 
-person = {'firat_name': 'Samiul', 'last_name': 'Azam', 'year_born': 1988}
+person = {'first_name': 'Samiul', 'last_name': 'Azam', 'year_born': 1988}
 print(person)
 print(person['year_born'])
 person['month_born'] = 'December'
