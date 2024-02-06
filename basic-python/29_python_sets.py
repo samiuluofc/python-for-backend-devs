@@ -1,5 +1,5 @@
 """
-*   A collection of elements without any ordering.
+*   A collection of elements (hetroginous) without any ordering.
 *   Each element in a set is unique.
 *   It is an iterable. Unlike dictionary there is no order of insertion is maintained.
 *   Like dictionary, set elements also need to hashable (immutable).
