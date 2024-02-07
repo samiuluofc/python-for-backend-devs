@@ -20,11 +20,12 @@ print(issubclass(KeyError, LookupError))
 print(issubclass(ValueError, LookupError))
 print(issubclass(IndexError, LookupError))
 print(issubclass(LookupError, Exception))
-print(isinstance(ex, ValueError)
-      )  # is 'ex' is an instance/object of the class ValueError (False)
-print(isinstance(
-    ex,
-    KeyError))  # is 'ex' is an instance/object of the class KeyError (True)
+
+# is 'ex' is an instance/object of the class ValueError (False)
+print(isinstance(ex, ValueError))
+# is 'ex' is an instance/object of the class KeyError (True)
+print(isinstance(ex, KeyError))
 print(isinstance(ex, LookupError))  # True
-print(isinstance(ex,
-                 Exception))  # True (so its also instance of all base classes)
+
+# True (so its also instance of the top level base class)
+print(isinstance(ex, Exception))
