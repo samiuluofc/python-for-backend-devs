@@ -50,3 +50,23 @@ except ZeroDivisionError:
     average = 0
 
 print(f"Average: {average}")
+
+# We can use broad exception catching, if we log the details somewhere.
+try:
+    1 / 0
+except Exception as ex:
+    print(f"looging error: {ex}")  # we can use python logging module
+    # raise # we can raise the same exception without explicitly mention it
+print("program still running")
+
+# Finally statement
+
+try:
+    raise ValueError("Raised from the try block")
+except ValueError as ex:
+    print(f"Exception handled/logged: {ex}")
+    raise TypeError("This is type error")  # Even though finally will execute
+    # Traceback/stacktrace will show the chain of exception raise. So we can see thw root cause
+finally:
+    print("This will always executed")
+print("Done")
