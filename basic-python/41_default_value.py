@@ -66,4 +66,9 @@ def process_data(data, item_sep=',', line_sep='\n'):
 
 data = [[10, 20, 30], [40, 50, 60], [700, 800, 900]]
 print(process_data(data))
+
+# '-' and '|' are passing as keyword arguments
 print(process_data(data, item_sep='-', line_sep='|'))
+
+# '-' and '|' are passing as positional arguments
+print(process_data(data, '-', '|'))
