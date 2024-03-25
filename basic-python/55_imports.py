@@ -43,7 +43,12 @@ Import actually does following:
 
 """
 
+# import cmath
+# import fractions
 import math  # cmath handles complex number as well
+
+# import os.path as os_path  # os contains another module called path (nested)
+# import random as rnd  # alias to assign the module to a custom variable
 
 print(type(math), math)
 # help(math.sqrt)
@@ -55,3 +60,7 @@ from math import factorial, pi, sqrt
 print(sqrt(16), factorial(5), pi)
 
 # Some important built-in modules
+# import csv
+# import datetime
+# import decimal
+# import statistics
