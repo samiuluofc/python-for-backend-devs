@@ -37,9 +37,11 @@ file.close()
 print(file.closed)
 
 file = open("test.txt", 'r')  # file object
-data = file.readlines()  # read all lines at a time
+data = file.readlines(
+)  # read all lines at a time, returns as a list of string
 file.close()
 print(len(data))  # list of strings (each line)
+print(data)
 
 # We can read one line at a time.
 # File object is an iterator.
