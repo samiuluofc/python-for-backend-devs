@@ -17,7 +17,15 @@ https://docs.python.org/3/library/index.html
 
 3rd party libraries https://pypi.org/:
 * Tons of packages (As of Jan 2024, there are 500K packages)
-* Need to install first (use pip install)
+* Need to install first (use pip install <package> or pip install -r requirements.txt)
+Some popular 3rd party packages are:
+1. https://pypi.org/project/pandas/
+2. https://pypi.org/project/numpy/
+3. https://pypi.org/project/matplotlib/
+4. https://pypi.org/project/pytz/
+5. https://pypi.org/project/python-dateutil/
+6. https://pypi.org/project/requests/
+
 
 How to find the good ones:
 * See which ones are popular: mentioned in the books, posts, blogs, web sites
