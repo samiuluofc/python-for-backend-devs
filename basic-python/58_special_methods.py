@@ -51,7 +51,8 @@ e = Circle(20)
 print(c)  # Default behavior: Class name and object id
 print(str(c))
 print(repr(c))  # Default behavior: Class name and object id
-print(
-    c == d)  # Default: c is d (are they same object? not comparing the value)
+
+# Default: c is d (are they same object? not comparing the value)
+print(c == d)
 print(d < e)
 print(c < d)
